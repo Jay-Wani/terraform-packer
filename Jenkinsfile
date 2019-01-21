@@ -3,7 +3,7 @@ import groovy.json.JsonSlurperClassic
 
 node {
     stage('Pull') {
-	tool name: 'jdk8', type: 'jdk'
+/*	tool name: 'jdk8', type: 'jdk'
    	env.JAVA_HOME = "${jdk}"
 
   	echo "jdk installation path is: ${jdk}"
@@ -13,7 +13,7 @@ node {
 
   	// note that simple quote strings are not evaluated by Groovy
   	// substitution is done by shell script using environment
-  	sh '$JAVA_HOME/bin/java -version'
+  	sh '$JAVA_HOME/bin/java -version' */
 	tool name: 'maven', type: 'maven'
 	def mvnHome = tool 'maven'
 	env.PATH = "${mvnHome}/bin:${env.PATH}"    
