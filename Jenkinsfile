@@ -3,7 +3,7 @@ import groovy.json.JsonSlurperClassic
 
 node {
     stage('Pull') {
-	tool name: 'JDK8', type: 'jdk'
+	tool name: 'jdk8', type: 'jdk'
    	env.JAVA_HOME = "${jdk}"
 
   	echo "jdk installation path is: ${jdk}"
