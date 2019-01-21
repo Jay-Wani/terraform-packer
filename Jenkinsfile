@@ -3,7 +3,7 @@ import groovy.json.JsonSlurperClassic
 
 node {
     stage('Pull') {
-/*	tool name: 'jdk8', type: 'jdk' */
+	tool name: 'JDK 8u181', type: 'jdk' 
 	tool name: 'maven', type: 'maven'
 	def mvnHome = tool 'maven'
 	env.PATH = "${mvnHome}/bin:${env.PATH}"    
