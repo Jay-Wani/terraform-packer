@@ -1,5 +1,9 @@
 #!/usr/bin/env groovy
 import groovy.json.JsonSlurperClassic
+import jenkins.model.*
+
+jenkins = Jenkins.instance
+
 
 node {
     stage('Pull') {
